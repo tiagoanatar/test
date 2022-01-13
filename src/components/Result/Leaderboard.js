@@ -11,7 +11,7 @@ import { calculateScore, calculateGrade } from '../../utils';
   }) => {
 
   const score = calculateScore(totalQuestions, correctAnswers);
-  const { grade, remarks } = calculateGrade(score);
+  const { grade } = calculateGrade(score);
   const [browserData, setBrowserData] = useState([]);
 
   function allStorage() {
@@ -30,7 +30,7 @@ import { calculateScore, calculateGrade } from '../../utils';
     const receiveData = allStorage().map((item) => JSON.parse(item))
     setBrowserData(receiveData);
     console.log(receiveData);
-  })
+  },[name, score, grade])
 
   return (
     <Table celled striped selectable size="large">
