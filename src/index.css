@@ -1,0 +1,9 @@
+@import url(../node_modules/semantic-ui-css/semantic.min.css);
+
+body {
+  background-color: #222;
+}
+
+.ui.Container.mainContainer  {
+  background-color: #222;
+}
