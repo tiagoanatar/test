@@ -30,7 +30,7 @@ import { calculateScore, calculateGrade } from '../../utils';
     const receiveData = allStorage().map((item) => JSON.parse(item))
     setBrowserData(receiveData);
     console.log(receiveData);
-  },[])
+  })
 
   return (
     <Table celled striped selectable size="large">
